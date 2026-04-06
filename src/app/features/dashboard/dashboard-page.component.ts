@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { TaskCounterCardComponent } from './task-counter-card/task-counter-card.component';
 import { Statistic } from './models/statistic.interface';
+import { DashboardToolbarComponent } from './dashboard-toolbar/dashboard-toolbar.component';
 
 @Component({
   selector: 'app-dashboard-page',
   standalone: true,
-  imports: [TaskCounterCardComponent],
+  imports: [TaskCounterCardComponent, DashboardToolbarComponent],
   templateUrl: './dashboard-page.component.html',
   styleUrl: './dashboard-page.component.scss',
 })
@@ -48,4 +49,21 @@ export class DashboardPageComponent {
       color: 'red',
     },
   ];
+
+filterStatus = signal('all');
+filterPriority = signal('');
+
+onStatusChange(status: string) {
+  this.filterStatus.set(status);
+}
+
+onPriorityChange(priority: string) {
+  this.filterPriority.set(priority);
+}
+
+
+
+onAddClick() {
+  console.log('Add Task Clicked');
+}
 }

@@ -4,3 +4,10 @@
      [color]="stat.color" [changeType]="stat.changeType"/>
   }
 </section>
+
+<section class="dashboard-toolbar" aria-label="Task Filters">
+  <app-dashboard-toolbar (statusChange)="onStatusChange($event)" (priorityChange)="onPriorityChange($event)" (addTask)="onAddClick()">
+  
+</app-dashboard-toolbar>
+</section>
+
