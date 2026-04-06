@@ -1,0 +1,15 @@
+<div class="counter-card ">
+  <div class="top">
+  
+     <!-- check icon image later -->
+      <!-- <img  alt="{{ title }} icon">  -->
+         <!-- Fallback to material icon if image fails to load -->
+         <span class="material-icons card-icon" [ngStyle]="{'color': color}">{{ icon }}</span>
+       <span  class="card-title">{{ title }}</span>
+ 
+  </div>
+
+  <h2>{{ value }}</h2>
+  <span  class="labelText" [ngClass]="{positiveText: changeType == 'positive', negativeText: changeType == 'negative', 'neutralText': changeType == 'neutral'}">
+    {{ changeLabel }}</span>
+</div>

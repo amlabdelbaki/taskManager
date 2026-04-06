@@ -1,0 +1,6 @@
+<section class="dashboard-stats" aria-label="Task summary">
+  @for (stat of stats; track stat.title) {
+    <app-task-counter-card [title]="stat.title" [value]="stat.value" [icon]="stat.icon" [changeLabel]="stat.changeLabel"
+     [color]="stat.color" [changeType]="stat.changeType"/>
+  }
+</section>

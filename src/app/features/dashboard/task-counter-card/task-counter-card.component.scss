@@ -1,0 +1,76 @@
+:host {
+display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-card {
+    max-height: 160px;
+    padding: 0.825rem 0.85rem 0.825rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    h6{
+      font-size: 30px;
+    }
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.card-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(117, 117, 117, 1);
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.card-icon {
+  flex-shrink: 0;
+  font-size: 1.375rem;
+  // width: 2.25rem;
+  // height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  // background: rgba(37, 99, 235, 0.1);
+  // border-radius: 10px;
+}
+
+.counter-card__value {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  line-height: 1.2;
+}
+.labelText {
+  font-size: 0.675rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.positiveText {
+  color: #16a34a;
+}
+.negativeText {
+  color: #dc2626;
+}
+.neutralText {
+  color: #6b7280;
+}
