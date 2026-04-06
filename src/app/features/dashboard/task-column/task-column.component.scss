@@ -1,0 +1,37 @@
+.task-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 300px;
+}
+.column-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-height: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    align-items: center;
+    h6{
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .badge {
+    background-color: rgb(224, 224, 224);
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    }
+
+  
+}

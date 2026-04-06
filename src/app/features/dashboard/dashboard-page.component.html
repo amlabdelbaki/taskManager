@@ -10,4 +10,11 @@
   
 </app-dashboard-toolbar>
 </section>
+<section class="dashboard-tasks" aria-label="Task Board">
+  <app-task-board
+    [tasks]="filteredTasks()"
+    (statusUpdated)="onStatusUpdated($event)">
+  </app-task-board>
+
+</section>
 

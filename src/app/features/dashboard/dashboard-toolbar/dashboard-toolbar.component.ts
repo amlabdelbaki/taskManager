@@ -23,10 +23,10 @@ export class DashboardToolbarComponent {
   @Output() priorityChange = new EventEmitter<string>();
   @Output() addTask = new EventEmitter<void>();
 
-  selectedPriority = '';
+  selectedPriority = 'all';
 
   onTabChange(index: number): void {
-    const map = ['all', 'todo', 'in-progress', 'done'];
+    const map = ['all', 'todo', 'in_progress', 'done'];
     this.statusChange.emit(map[index] ?? 'all');
   }
 
