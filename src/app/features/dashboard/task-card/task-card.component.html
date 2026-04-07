@@ -5,7 +5,13 @@
         {{ t.priority }}
       </span>
 
-      <button type="button" mat-icon-button class="menu-btn" aria-label="Task options">
+      <button
+        type="button"
+        mat-icon-button
+        class="menu-btn"
+        aria-label="Task options"
+        [matMenuTriggerFor]="taskMenu"
+        (click)="stopEvent($event)">
         <mat-icon>more_vert</mat-icon>
       </button>
     </div>
@@ -30,4 +36,15 @@
       <span class="name">{{ t.assignee.name }}</span>
     </div>
   </mat-card>
+
+  <mat-menu #taskMenu="matMenu" panelClass="task-card-menu">
+    <button mat-menu-item type="button" class="task-card-menu__item" (click)="onEdit($event)">
+      <mat-icon>edit</mat-icon>
+      <span>Edit</span>
+    </button>
+    <button mat-menu-item type="button" class="task-card-menu__item">
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+  </mat-menu>
 }

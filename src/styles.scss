@@ -2,3 +2,14 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-menu-item{
+      min-height: 30px !important;
+}
+.mat-mdc-menu-item:not([disabled]):hover {
+  background-color: #fff !important;
+}
+.mat-mdc-menu-content,
+ .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text {
+  background-color: #ffffff !important;
+}
