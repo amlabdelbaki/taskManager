@@ -1,0 +1,12 @@
+
+
+  <app-task-column
+    *ngFor="let col of columns"
+    [title]="col.title"
+    [tasks]="getTasksByStatus(col.key)"
+    [status]="col.key"
+    [connectedLists]="getConnectedList()"  
+    (taskDropped)="drop($event)">
+  </app-task-column>
+
+

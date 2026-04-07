@@ -1,0 +1,147 @@
+:host {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.task-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  background: #ffffff;
+  padding: 0.9rem 0.95rem;
+}
+
+.card-high{
+  background-color: rgba(255, 235, 238, 1);
+  border-left: 2px solid rgba(211, 47, 47, 1);
+
+}
+
+
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.55rem;
+}
+
+.priority {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.18rem 0.52rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.priority.high {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.priority.medium {
+  color: #a16207;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.priority.low {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.menu-btn {
+  color: #64748b;
+}
+
+.menu-btn mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.desc {
+  margin: 0.35rem 0 0;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.meta {
+  margin-top: 0.7rem;
+  display: flex;
+  align-items: flex-start;
+  // justify-content: space-between;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.due {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #64748b;
+  font-size: 0.74rem;
+}
+
+.due mat-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+.due.overdue {
+  color: #dc2626;
+}
+
+.tag {
+  // border-radius: 6px;
+  // background: #f1f5f9;
+  color: #475569;
+  font-size: 0.68rem;
+  font-weight: 500;
+  // padding: 0.18rem 0.42rem;
+  white-space: nowrap;
+}
+
+.footer {
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(224, 224, 224, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.63rem;
+  font-weight: 700;
+}
+
+.name {
+  color: #334155;
+  font-size: 0.76rem;
+}
