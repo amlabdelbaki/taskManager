@@ -1,0 +1,129 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.875rem;
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+
+}
+
+.status-tabs {
+  flex: 1;
+  min-width: 0;
+  max-width: 310px;
+}
+
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.priority-field {
+  width: 130px;
+}
+
+.add-btn.mat-mdc-unelevated-button {
+  height: 38px;
+  border-radius: 8px;
+  padding: 0 0.95rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  --mdc-filled-button-container-color: #2563eb;
+  --mdc-filled-button-label-text-color: #ffffff;
+}
+
+.add-btn.mat-mdc-unelevated-button:hover {
+  --mdc-filled-button-container-color: #1d4ed8;
+}
+
+/* Toolbar tab  */
+:host ::ng-deep  .mat-mdc-tab-label-container {
+  border: 0px;
+}
+:host ::ng-deep .status-tabs .mat-mdc-tab-header {
+  border-bottom: 0;
+}
+
+:host ::ng-deep .status-tabs .mdc-tab-indicator {
+  display: none;
+}
+
+:host ::ng-deep .status-tabs .mat-mdc-tab {
+  min-width: auto;
+  height: 34px;
+  padding: 0 10px;
+  margin-right: 4px;
+  border-radius: 8px;
+}
+
+:host ::ng-deep .status-tabs .mdc-tab__text-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+:host ::ng-deep .status-tabs .mdc-tab--active {
+  background: #2563eb;
+  color: #ffffff;
+}
+:host ::ng-deep .status-tabs .mdc-tab--active:hover .mdc-tab__text-label  {
+ color: #ffffff;
+}
+:host ::ng-deep .status-tabs .mdc-tab--active .mdc-tab__text-label {
+  color: #ffffff;
+}
+
+:host ::ng-deep .priority-field .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+:host ::ng-deep .priority-field .mat-mdc-text-field-wrapper {
+  height: 38px;
+  border-radius: 8px;
+}
+
+:host ::ng-deep .priority-field .mat-mdc-form-field-infix {
+  min-height: 38px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 920px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 560px) {
+  .actions {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // gap: 0.5rem;
+  }
+
+  .priority-field {
+    width: 100%;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+<section class="dashboard-stats" aria-label="Task summary">
+  @for (stat of stats; track stat.title) {
+    <app-task-counter-card [title]="stat.title" [value]="stat.value" [icon]="stat.icon" [changeLabel]="stat.changeLabel"
+     [color]="stat.color" [changeType]="stat.changeType"/>
+  }
+</section>
+
+<section class="dashboard-toolbar" aria-label="Task Filters">
+  <app-dashboard-toolbar (statusChange)="onStatusChange($event)" (priorityChange)="onPriorityChange($event)" (addTask)="onAddClick()">
+  
+</app-dashboard-toolbar>
+</section>
+<section class="dashboard-tasks" aria-label="Task Board">
+  <app-task-board
+    [tasks]="filteredTasks()"
+    (statusUpdated)="onStatusUpdated($event)">
+  </app-task-board>
+
+</section>
