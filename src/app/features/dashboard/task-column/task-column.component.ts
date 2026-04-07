@@ -15,7 +15,8 @@ export class TaskColumnComponent {
   @Input() title = '';
   @Input() tasks: any[] = [];
   @Input() status: TaskStatus = 'todo';
-   @Input() connectedLists: string[] = [];
+  @Input() connectedLists: string[] = [];
+  @Input() dragDisabled = false;
   @Output() taskDropped = new EventEmitter<{
     event: any;
     status: TaskStatus;
@@ -33,6 +34,6 @@ trackById(index: number, task: Task) {
   return task.id;
 }
 getConnectedListIds(status: TaskStatus): string[] {
-return this.connectedLists.filter(id => id !== status)
+return this.dragDisabled ? [] : this.connectedLists.filter(id => id !== status)
 }
 }
