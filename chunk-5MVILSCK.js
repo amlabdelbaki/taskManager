@@ -1,1 +1,0 @@
-import{Cb as a,Db as n,Ub as o,ac as p,ma as s}from"./chunk-XZMYBD5H.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=s({type:t,selectors:[["app-tasks-page"]],standalone:!0,features:[p],decls:2,vars:0,template:function(e,r){e&1&&(a(0,"h1"),o(1,"Tasks"),n())},styles:["[_nghost-%COMP%]{display:block}"]})};export{i as TasksPageComponent};

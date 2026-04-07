@@ -1,0 +1,1 @@
+import{Db as a,Eb as s,Vb as o,bc as i,ma as n}from"./chunk-7AMOGBLU.js";var l=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-analytics-page"]],standalone:!0,features:[i],decls:2,vars:0,template:function(e,p){e&1&&(a(0,"h1"),o(1,"Analytics"),s())},styles:["[_nghost-%COMP%]{display:block}"]})};export{l as AnalyticsPageComponent};

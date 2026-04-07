@@ -1,0 +1,1 @@
+import{Db as n,Eb as o,Vb as m,bc as s,ma as a}from"./chunk-7AMOGBLU.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=a({type:t,selectors:[["app-team-page"]],standalone:!0,features:[s],decls:2,vars:0,template:function(e,r){e&1&&(n(0,"p"),m(1,"team-page works!"),o())},styles:["[_nghost-%COMP%]{display:block}"]})};export{p as TeamPageComponent};

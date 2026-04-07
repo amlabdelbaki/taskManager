@@ -1,1 +1,0 @@
-import{Cb as n,Db as o,Ub as r,ac as l,ma as t}from"./chunk-XZMYBD5H.js";var s=class a{static \u0275fac=function(e){return new(e||a)};static \u0275cmp=t({type:a,selectors:[["app-calendar-page"]],standalone:!0,features:[l],decls:2,vars:0,template:function(e,i){e&1&&(n(0,"h1"),r(1,"Calendar"),o())},styles:["[_nghost-%COMP%]{display:block}"]})};export{s as CalendarPageComponent};
