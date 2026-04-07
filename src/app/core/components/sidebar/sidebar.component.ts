@@ -3,6 +3,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskFormDialogComponent } from '../../../shared/components/task-form-dialog/task-form-dialog.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,6 +17,10 @@ import { MatButtonModule } from '@angular/material/button';
 export class SidebarComponent {
   @Input() collapsed = false;
 
+  constructor(
+    private dialog: MatDialog,
+  ) {}
+
   menuItems = [
     { label: 'Dashboard', icon: 'dashboard', route: '/', exact: true },
     { label: 'Tasks', icon: 'task', route: '/tasks' },
@@ -23,4 +29,13 @@ export class SidebarComponent {
     { label: 'Team', icon: 'group', route: '/users' },
     { label: 'Settings', icon: 'settings', route: '/settings' }
   ];
+
+  onAddClick(): void {
+    this.dialog.open(TaskFormDialogComponent, {
+      width: '640px',
+      data: {
+        mode: 'add',
+      },
+    });
+  }
 }

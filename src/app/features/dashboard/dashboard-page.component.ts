@@ -6,6 +6,8 @@ import { TaskBoardComponent } from './task-board/task-board.component';
 import { Task, TaskStatus } from './models/task.interface';
 import { ManageTaskService } from '../../shared/services/manage-task.service';
 import { SearchService } from '../../shared/services/search.service';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskFormDialogComponent } from '../../shared/components/task-form-dialog/task-form-dialog.component';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -53,8 +55,11 @@ filteredTasks = computed(() => {
   });
 });
 
-constructor(private manageTaskService: ManageTaskService,
-            private searchService: SearchService) {}
+constructor(
+  private manageTaskService: ManageTaskService,
+  private searchService: SearchService,
+  private dialog: MatDialog,
+) {}
 
 ngOnInit() {
   this.getDashboardData();
@@ -70,7 +75,6 @@ getDashboardData() {
 }
 
 onStatusUpdated(data: { task: Task, status: TaskStatus }) {
-
   this.tasks.update(currentTasks =>
     currentTasks.map(t =>
       t.id === data.task.id
@@ -81,7 +85,13 @@ onStatusUpdated(data: { task: Task, status: TaskStatus }) {
 }
 
 onAddClick() {
-  // Logic to open a dialog or navigate to a task creation page
+  this.dialog.open(TaskFormDialogComponent, {
+    width: '640px',
+    data: {
+      mode: 'add',
+    },
+  });
+   
   console.log('Add Task Clicked');
 }
 }

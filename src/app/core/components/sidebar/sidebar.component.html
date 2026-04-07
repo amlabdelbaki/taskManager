@@ -14,7 +14,7 @@
   </nav>
 
   <div class="sidebar-footer">
-    <button mat-flat-button type="button" class="new-task-btn" [attr.aria-label]="collapsed ? 'New Task' : null">
+    <button mat-flat-button type="button" class="new-task-btn" [attr.aria-label]="collapsed ? 'New Task' : null" (click)="onAddClick()">
       <mat-icon>add</mat-icon>
       New Task
     </button>
