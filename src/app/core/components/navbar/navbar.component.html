@@ -1,17 +1,17 @@
 <mat-toolbar class="navbar">
   <div class="navbar-brand">
-    <div class="logo">
+    <button type="button" class="logo" (click)="onLogoClick()" aria-label="Toggle sidebar">
       <span class="logo-mark" aria-hidden="true">
         <mat-icon>description</mat-icon>
       </span>
       <span class="logo-text">Task Manager</span>
-    </div>
+    </button>
   </div>
 
   <div class="navbar-search">
     <div class="search">
       <mat-icon class="search-icon">search</mat-icon>
-      <input type="search" placeholder="Search tasks..." autocomplete="off" />
+      <input type="search" placeholder="Search tasks..." autocomplete="off" (input)="onSearch($event)" />
     </div>
   </div>
 

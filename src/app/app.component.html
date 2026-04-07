@@ -1,7 +1,7 @@
-<app-navbar></app-navbar>
+<app-navbar (logoClick)="toggleSidebar()"></app-navbar>
 
 <div class="layout">
-  <app-sidebar></app-sidebar>
+  <app-sidebar [collapsed]="sidebarCollapsed()"></app-sidebar>
 
   <div class="content">
     <router-outlet></router-outlet>
