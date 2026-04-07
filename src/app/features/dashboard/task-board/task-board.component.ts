@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { TaskColumnComponent } from '../task-column/task-column.component';
 import { Task, TaskStatus } from '../models/task.interface';
 import { CdkDragDrop, DragDropModule, transferArrayItem } from '@angular/cdk/drag-drop';
@@ -17,6 +17,7 @@ export class TaskBoardComponent {
     task: Task;
     status: TaskStatus;
   }>();
+  isMobile = this.checkIsMobile();
 
   columns: { key: TaskStatus; title: string }[] = [
     { key: 'todo', title: 'To Do' },
@@ -49,6 +50,15 @@ export class TaskBoardComponent {
 
   getConnectedList() {
     return this.columns.map((c) => c.key);
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.isMobile = this.checkIsMobile();
+  }
+
+  private checkIsMobile(): boolean {
+    return typeof window !== 'undefined' && window.innerWidth <= 768;
   }
 }
 

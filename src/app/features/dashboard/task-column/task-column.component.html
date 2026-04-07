@@ -1,6 +1,7 @@
 <div class="task-column"  cdkDropList
   [cdkDropListData]="tasks"
   [id]="status"
+  [cdkDropListDisabled]="dragDisabled"
   [cdkDropListConnectedTo]="getConnectedListIds(status)"
   (cdkDropListDropped)="drop($event)">
     <div class="column-header">
@@ -22,6 +23,7 @@
     <div
       *ngFor="let task of tasks; trackBy: trackById"
       cdkDrag
+      [cdkDragDisabled]="dragDisabled"
       [cdkDragData]="task"
       class="task-card">
       <app-task-card [task]="task"></app-task-card>

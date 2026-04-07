@@ -5,7 +5,8 @@
     [title]="col.title"
     [tasks]="getTasksByStatus(col.key)"
     [status]="col.key"
-    [connectedLists]="getConnectedList()"  
+    [connectedLists]="getConnectedList()"
+    [dragDisabled]="isMobile"
     (taskDropped)="drop($event)">
   </app-task-column>
 
